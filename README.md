@@ -7,14 +7,9 @@
 
 Адрес для GitHub Pages: https://dashulikgorbunova.github.io/Test_practica/
 
-Для публикации: **Settings → Pages → Deploy from a branch → main → / (root) → Save**.
-
 ## Запуск
 
-Скачайте репозиторий и откройте `index.html` в браузере. Все три файла
-(`index.html`, `style.css`, `script.js`) должны находиться в одной папке.
-
-Либо запустите локальный сервер из папки проекта:
+Запустите локальный сервер из папки проекта:
 
 ```sh
 python3 -m http.server 8000
