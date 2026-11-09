@@ -3,26 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Игровой чат</title>
+  <title>Игровой чат · Star Squad</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="lobby-label"><span aria-hidden="true">✦</span> STAR SQUAD <span>ЛОББИ КОМАНДЫ</span></div>
   <main class="chat">
     <header>
-      <span class="badge">СТРЕКОЗА · ИГРОВОЕ ЛОББИ</span>
-      <h1>Игровой чат</h1>
-      <p>Поздоровайтесь с командой перед игрой</p>
+      <span class="badge">★ СОБИРАЕМ КОМАНДУ</span>
+      <h1>НА СВЯЗИ!</h1>
+      <p>Хорошая игра начинается с «привет»</p>
     </header>
+    <fieldset class="heroes">
+      <legend>ВЫБЕРИ СВОЕГО ГЕРОЯ</legend>
+      <label class="hero"><input type="radio" name="hero" value="Искра" data-icon="⚡" checked><span><b aria-hidden="true">⚡</b>Искра<small>Энергия команды</small></span></label>
+      <label class="hero"><input type="radio" name="hero" value="Титан" data-icon="🤖"><span><b aria-hidden="true">🤖</b>Титан<small>Стальная защита</small></span></label>
+      <label class="hero"><input type="radio" name="hero" value="Лис" data-icon="🦊"><span><b aria-hidden="true">🦊</b>Лис<small>Хитрый ход</small></span></label>
+    </fieldset>
     <section class="conversation" aria-label="Переписка">
-      <p id="empty-state">Пока тихо. Напишите первое сообщение!</p>
+      <p id="empty-state">✦<br>КОМАНДА ЖДЁТ ТЕБЯ!<br><span>Выбери героя и отправь первое сообщение</span></p>
       <ul id="messages" role="log" aria-label="Сообщения" aria-live="polite"></ul>
     </section>
     <form id="message-form">
-      <label for="message-input">Ваше сообщение</label>
+      <label for="message-input">СООБЩЕНИЕ КОМАНДЕ</label>
       <div class="input-row">
         <input id="message-input" name="message" type="text" placeholder="Всем привет!" autocomplete="off">
-        <button type="submit">Отправить</button>
+        <button type="submit">Отправить ➜</button>
       </div>
       <small>Enter — отправить · Сообщения исчезнут после обновления страницы</small>
     </form>

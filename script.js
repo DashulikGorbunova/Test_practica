@@ -14,6 +14,9 @@ form.addEventListener('submit', (event) => {
   }
 
   const message = document.createElement('li');
+  const author = document.createElement('strong');
+  const hero = document.querySelector('input[name="hero"]:checked');
+  author.textContent = `${hero.dataset.icon} ${hero.value} · Вы`;
   const content = document.createElement('p');
   const time = document.createElement('time');
   const now = new Date();
@@ -26,7 +29,7 @@ form.addEventListener('submit', (event) => {
     minute: '2-digit',
   });
 
-  message.append(content, time);
+  message.append(author, content, time);
   messages.append(message);
   emptyState.hidden = true;
   input.value = '';
